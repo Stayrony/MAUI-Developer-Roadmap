@@ -69,7 +69,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [Platform-specific code](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/invoke-platform-code) — partial classes, `#if ANDROID/IOS/...`, `Platforms/` folders
 - [Hot Reload](https://learn.microsoft.com/en-us/dotnet/maui/xaml/hot-reload) (XAML) and .NET Hot Reload (C#)
   1. **Android**
-      - [Android project structure & manifest](https://learn.microsoft.com/en-us/dotnet/maui/android/)
+      - [Android project structure & manifest](https://learn.microsoft.com/en-us/dotnet/maui/android/manifest)
       - Activities, Intents, permissions
   2. **iOS & Mac Catalyst**
       - [iOS project structure](https://learn.microsoft.com/en-us/dotnet/maui/ios/), `Info.plist`, entitlements
@@ -83,11 +83,22 @@ If you like or are using this project to learn or start your solution, please gi
 - [**CollectionView**](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/collectionview/) & [CarouselView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/carouselview/) — modern, performant lists
 - [BindableLayout](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/layouts/bindablelayout) — bind a layout to a collection
 - [Building custom controls](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/contentview) (ContentView, bindable properties, templated controls)
-- [**Gestures**](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/) — tap, swipe, pan, pinch, drag & drop
+- [**Gestures**](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/gestures/tap) — tap, swipe, pan, pinch, drag & drop
 - [**Animations**](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/animation/basic) — basic & easing animations
 - [Popups, toasts & snackbars](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/alerts/) (CommunityToolkit.Maui)
 
-### 7. Styling & Theming
+### 7. UI Component Libraries
+
+> Ready-made control suites and UI kits save you from building complex controls (charts, data grids, schedulers) from scratch.
+
+- [Syncfusion Essential Studio for .NET MAUI](https://www.syncfusion.com/maui-controls) — large commercial control suite (free Community License available)
+- [Telerik UI for .NET MAUI](https://www.telerik.com/maui-ui) — commercial controls (DataGrid, Charts, Scheduler)
+- [DevExpress .NET MAUI Controls](https://www.devexpress.com/maui/) — commercial controls (free for eligible users)
+- [UraniumUI](https://enisn-projects.io/docs/en/uranium/current) — free, open-source Material Design controls & MVVM helpers
+- [DrawnUI for .NET MAUI](https://github.com/taublast/DrawnUi.Maui) — SkiaSharp-rendered UI for pixel-perfect, high-performance custom UI
+- [Sharpnado](https://github.com/roubachof/Sharpnado.Tabs) — free controls (tabs, CollectionView enhancements, shadows)
+
+### 8. Styling & Theming
 
 - [Styles (XAML)](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/styles/xaml) — explicit, implicit, and `BasedOn` styles
 - [**Resource Dictionaries**](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/resource-dictionaries) & merged dictionaries
@@ -96,7 +107,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [Visual states](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/visual-states) (VisualStateManager)
 - [Platform-specific styling](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/customize-ui-appearance) (OnPlatform, OnIdiom)
 
-### 8. Resources: Fonts, Images & App Icons
+### 9. Resources: Fonts, Images & App Icons
 
 - [Images](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/images) — adding, sizing, and multi-resolution assets
 - [**Fonts & font icons**](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) — embedding custom fonts, using icon fonts
@@ -104,7 +115,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [**Splash screen**](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/splashscreen)
 - [Raw & embedded assets](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/rawfiles)
 
-### 9. MVVM Fundamentals
+### 10. MVVM Fundamentals
 
 - [MVVM pattern](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm)
 - [**Dependency Injection**](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/dependency-injection) — built into MAUI via `Microsoft.Extensions.DependencyInjection`; register services in `MauiProgram.cs`
@@ -114,15 +125,16 @@ If you like or are using this project to learn or start your solution, please gi
 - [Validation](https://learn.microsoft.com/en-us/dotnet/architecture/maui/validation)
 - **Messaging**: use [`WeakReferenceMessenger`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/messenger) (CommunityToolkit.Mvvm) for decoupled component communication
 
-### 10. MVVM / App Frameworks
+### 11. MVVM / App Frameworks
 
 - [**CommunityToolkit.Mvvm**](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) — **recommended default.** Observable properties and commands with minimal boilerplate via source generators (`[ObservableProperty]`, `[RelayCommand]`)
 - [**.NET MAUI Community Toolkit**](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/) — controls, converters, behaviors, `MediaElement`, popups. Remember to call `.UseMauiCommunityToolkit()` in `MauiProgram.cs`
 - [Prism](https://prismlibrary.com/) — full-featured app framework (modularity, navigation, dialogs) with MAUI support
 - [ReactiveUI](https://reactiveui.net/) — composable, reactive (Rx) MVVM framework
 - [MVVMCross](https://www.mvvmcross.com/) — mature cross-platform MVVM framework
+- **MVU / reactive alternatives** — [Comet](https://github.com/dotnet/Comet) and [MauiReactor](https://github.com/adospace/reactorui-maui) (C# Model-View-Update), [Fabulous](https://github.com/fabulous-dev/Fabulous) (F#)
 
-### 11. App Architecture
+### 12. App Architecture
 
 - [MAUI enterprise app patterns](https://learn.microsoft.com/en-us/dotnet/architecture/maui/) — Microsoft's reference architecture (eShop)
 - [Clean Architecture](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures#clean-architecture) — separation of concerns, dependency rule
@@ -130,13 +142,15 @@ If you like or are using this project to learn or start your solution, please gi
 - Sharing code across projects (Core/domain layer, `.NET Standard`/shared libraries)
 - State management & the repository/service patterns
 
-### 12. Blazor Hybrid
+### 13. Hybrid Web (Blazor & HybridWebView)
 
+- [What are hybrid apps?](https://learn.microsoft.com/en-us/dotnet/maui/hybrid-apps/) — hosting web UI inside a native MAUI shell
 - [Blazor Hybrid](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/) — build UI with Razor components running in a `BlazorWebView`, sharing code with your web app
 - [.NET MAUI Blazor apps](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview)
+- [**HybridWebView**](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/hybridwebview) (.NET 9+) — host arbitrary HTML/JS/CSS with two-way C# ↔ JavaScript messaging; use it to reuse an existing web UI (React, Angular, Vue) without Blazor
 - Great for teams with existing web/Blazor skills and shared web + native codebases
 
-### 13. API Clients
+### 14. API Clients
 
 1. **REST**
     - [Refit](https://github.com/reactiveui/refit) — automatic type-safe REST library
@@ -148,7 +162,7 @@ If you like or are using this project to learn or start your solution, please gi
     - [Strawberry Shake](https://chillicream.com/docs/strawberryshake) — strongly-typed GraphQL client for .NET
     - [GraphQL.Client](https://github.com/graphql-dotnet/graphql-client)
 
-### 14. Data Access
+### 15. Data Access
 
 1. **Local databases**
     - [SQLite-net](https://github.com/praeclarum/sqlite-net) — lightweight ORM over SQLite
@@ -166,7 +180,7 @@ If you like or are using this project to learn or start your solution, please gi
     - [Supabase](https://supabase.com/docs/reference/csharp/introduction) — open-source Postgres backend with a C# client
     - [Azure Mobile Apps / Datasync](https://learn.microsoft.com/en-us/azure/developer/mobile-apps/azure-mobile-apps/overview) — offline sync
 
-### 15. Authentication
+### 16. Authentication
 
 - [Biometric authentication](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/) — fingerprint / Face ID / Touch ID (via community plugins such as Plugin.Fingerprint)
 - [**WebAuthenticator**](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/communication/authentication) — built-in OAuth browser flow (MAUI Essentials)
@@ -175,7 +189,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [Sign in with Apple](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/communication/authentication) — required by Apple if you offer other social logins
 - OpenID Connect libraries: [IdentityModel.OidcClient](https://github.com/IdentityModel/IdentityModel.OidcClient)
 
-### 16. Security
+### 17. Security
 
 - [Secure Storage](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/secure-storage) — never store secrets in plain preferences
 - [**OWASP MASVS**](https://mas.owasp.org/) — the mobile app security verification standard
@@ -184,7 +198,7 @@ If you like or are using this project to learn or start your solution, please gi
 - Code protection — [trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trim-self-contained) & obfuscation
 - Secrets management — keep API keys out of source; use a backend proxy where possible
 
-### 17. Media
+### 18. Media
 
 - [MediaElement](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/mediaelement) (CommunityToolkit.Maui) — audio/video playback
 - [Media picker & camera](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker) — built into MAUI Essentials
@@ -192,25 +206,25 @@ If you like or are using this project to learn or start your solution, please gi
 - [`GraphicsView` + Microsoft.Maui.Graphics](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/graphics/) — cross-platform drawing
 - [Lottie animations](https://github.com/Baseflow/LottieXamarin) / SkiaSharp.Skottie — vector animations
 
-### 18. Maps & Location
+### 19. Maps & Location
 
 - [Map control](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/map) (`Microsoft.Maui.Controls.Maps`) — pins, polygons, map types
 - [Geolocation](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/geolocation) — current position & continuous updates (MAUI Essentials)
 - [Geocoding](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/geocoding) — address ↔ coordinates
 - Geofencing (via platform APIs)
 
-### 19. Real-Time Communication
+### 20. Real-Time Communication
 
 - [SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/) — real-time server → client messaging
 - [gRPC](https://learn.microsoft.com/en-us/aspnet/core/grpc/) — high-performance RPC (including gRPC-Web)
 
-### 20. Logging
+### 21. Logging
 
 - [Microsoft.Extensions.Logging](https://learn.microsoft.com/en-us/dotnet/core/extensions/logging) — the built-in logging abstraction (register in `MauiProgram.cs`)
 - [Serilog](https://serilog.net/) — structured logging
 - [NLog](https://nlog-project.org/) — flexible logging platform
 
-### 21. Testing
+### 22. Testing
 
 1. [Unit Testing](https://learn.microsoft.com/en-us/dotnet/core/testing/)
     - [xUnit](https://xunit.net/) — popular .NET unit-testing framework
@@ -227,13 +241,21 @@ If you like or are using this project to learn or start your solution, please gi
 5. **Blazor Hybrid testing**
     - [bUnit](https://bunit.dev/) — testing Razor components
 
-### 22. Crash Reporting & Analytics
+### 23. Debugging, Diagnostics & Memory
+
+- **Memory leaks** — the most common real-world MAUI pitfall. Watch out for event handlers, circular references, and pages/handlers that never get collected. Prefer [`WeakReferenceMessenger`](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/messenger) and weak-event patterns, and unsubscribe from events
+- [.NET MAUI memory-leak guidance & tests](https://github.com/dotnet/maui/wiki/Memory-Leaks) — how the team detects leaks; apply the same patterns in your app
+- [Performance profiling for .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/profiling) — startup tracing, and the impact of AOT/trimming
+- [.NET diagnostics tools overview](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/tools-overview) — [`dotnet-trace`](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-trace) (CPU/event traces) & [`dotnet-gcdump`](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-gcdump) (heap snapshots for leak hunting)
+- [Layout & performance diagnostics](https://learn.microsoft.com/en-us/dotnet/maui/deployment/performance) — XAML binding diagnostics, layout diagnostics (.NET 10)
+
+### 24. Crash Reporting & Analytics
 
 - [Sentry](https://docs.sentry.io/platforms/dotnet/guides/maui/) — crash reporting & performance monitoring with first-class MAUI support
 - [Firebase Crashlytics](https://firebase.google.com/docs/crashlytics) & [Firebase Analytics](https://firebase.google.com/docs/analytics)
 - [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) — telemetry & analytics
 
-### 23. Payment Gateway
+### 25. Payment Gateway
 
 - [In-app purchases (iOS) / In-app billing (Android)](https://github.com/jamesmontemagno/InAppBillingPlugin) — Plugin.InAppBilling
 - [Apple Pay](https://developer.apple.com/apple-pay/) & [Google Pay](https://developers.google.com/pay/api)
@@ -241,7 +263,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [Braintree](https://developer.paypal.com/braintree/docs) / PayPal
 - [Adyen](https://docs.adyen.com/) — global payment platform
 
-### 24. Push Notifications
+### 26. Push Notifications
 
 1. **Remote**
     - [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging) — cross-platform push
@@ -250,14 +272,14 @@ If you like or are using this project to learn or start your solution, please gi
 2. **Local**
     - [Plugin.LocalNotification](https://github.com/thudugala/Plugin.LocalNotification) — cross-platform local notifications
 
-### 25. Background Work
+### 27. Background Work
 
 - Platform background models — Android [foreground services](https://developer.android.com/develop/background-work/services/foreground-services) & [WorkManager](https://developer.android.com/develop/background-work/background-tasks), iOS [BGTaskScheduler](https://developer.apple.com/documentation/backgroundtasks)
 - Long-running tasks & scheduled/periodic work
 - [Plugin.Maui.TaskScheduler](https://github.com/jfversluis) and similar community plugins
 - Keeping work alive across app suspension/termination
 
-### 26. Artificial Intelligence (AI)
+### 28. Artificial Intelligence (AI)
 
 1. **On-device ML**
     - [ONNX Runtime](https://onnxruntime.ai/) — run ML models cross-platform on-device
@@ -272,12 +294,12 @@ If you like or are using this project to learn or start your solution, please gi
     - [ML Kit Text Recognition](https://developers.google.com/ml-kit/vision/text-recognition), [Azure AI Vision](https://azure.microsoft.com/en-us/products/ai-services/ai-vision), [Google Cloud Vision](https://cloud.google.com/vision)
     - [Tesseract](https://github.com/tesseract-ocr/tesseract) — open-source OCR engine
 
-### 27. Advertising
+### 29. Advertising
 
 - [Google AdMob](https://admob.google.com/home/) — via community plugins (e.g. Plugin.MauiMTAdmob)
 - [AppLovin MAX](https://www.applovin.com/max/) / other mediation platforms
 
-### 28. App Distribution
+### 30. App Distribution
 
 1. **Android** — [Publish to Google Play](https://learn.microsoft.com/en-us/dotnet/maui/android/deployment/publish-google-play) (AAB), [Amazon Appstore](https://developer.amazon.com/apps-and-games)
 2. **iOS** — [Publish to the App Store](https://learn.microsoft.com/en-us/dotnet/maui/ios/deployment/publish-app-store) via App Store Connect
@@ -285,25 +307,25 @@ If you like or are using this project to learn or start your solution, please gi
 4. **macOS** — [Publish a Mac Catalyst app](https://learn.microsoft.com/en-us/dotnet/maui/mac-catalyst/deployment/publish-app-store)
 5. Beta testing: [TestFlight](https://developer.apple.com/testflight/) (iOS), [Google Play internal testing](https://support.google.com/googleplay/android-developer/answer/9845334)
 
-### 29. CI/CD
+### 31. CI/CD
 
 - [GitHub Actions](https://learn.microsoft.com/en-us/dotnet/maui/deployment/) — build/test/sign MAUI apps
 - [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/)
 - [`dotnet publish`](https://learn.microsoft.com/en-us/dotnet/maui/deployment/) for automated builds per platform
 - Code signing & provisioning (fastlane for iOS/Android is still widely used)
 
-### 30. Advanced
+### 32. Advanced
 
 1. **Native interop**
-    - [Android binding libraries](https://learn.microsoft.com/en-us/dotnet/android/binding-libs/) (Java/Kotlin)
-    - [iOS binding libraries](https://learn.microsoft.com/en-us/dotnet/ios/binding-libs/) (Objective-C/Swift)
+    - [Android binding libraries](https://learn.microsoft.com/en-us/dotnet/android/binding-libs/binding-java-libs/) (Java/Kotlin)
+    - [iOS binding libraries](https://learn.microsoft.com/en-us/dotnet/maui/ios/objective-sharpie/) (Objective-C/Swift) — via Objective Sharpie
     - [Native library interop](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/native-library-interop) — Slim Bindings
 2. **Cross-platform**
     - [Deep linking / App links](https://learn.microsoft.com/en-us/dotnet/maui/) & Shell URI navigation
     - [Localization](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization)
     - [Performance](https://learn.microsoft.com/en-us/dotnet/maui/deployment/performance) — startup tracing, layout diagnostics (.NET 10), **trimming & NativeAOT** for iOS/Mac Catalyst
 
-### 31. Tools
+### 33. Tools
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) (Windows) with the .NET MAUI workload
 - [Visual Studio Code](https://code.visualstudio.com/) + the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) — cross-platform, including macOS
@@ -312,12 +334,12 @@ If you like or are using this project to learn or start your solution, please gi
 - [Postman](https://www.postman.com/) — test web-service requests/responses
 - [Proxyman](https://proxyman.io/) / [Charles](https://www.charlesproxy.com/) — HTTP(S) traffic inspection
 
-### 32. Game Engine
+### 34. Game Engine
 
 - [MonoGame](https://monogame.net/) — free C# framework for cross-platform games
 - For richer needs, a dedicated engine like [Godot](https://godotengine.org/) (C# support) or Unity is the practical choice
 
-### 33. SOLID
+### 35. SOLID
 
 - [Single Responsibility Principle (SRP)](https://en.wikipedia.org/wiki/Single-responsibility_principle)
 - [Open-Closed Principle (OCP)](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
@@ -325,7 +347,7 @@ If you like or are using this project to learn or start your solution, please gi
 - [Interface Segregation Principle (ISP)](https://en.wikipedia.org/wiki/Interface_segregation_principle)
 - [Dependency Inversion Principle (DIP)](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 
-### 34. Design Patterns
+### 36. Design Patterns
 
 - [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)
 - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
@@ -337,6 +359,15 @@ If you like or are using this project to learn or start your solution, please gi
 - [Singleton](https://refactoring.guru/design-patterns/singleton)
 - [Facade](https://refactoring.guru/design-patterns/facade)
 - [Mediator](https://refactoring.guru/design-patterns/mediator)
+
+### 37. Community & Learning Resources
+
+- [dotnet/maui](https://github.com/dotnet/maui) — the official .NET MAUI repository (issues, discussions, roadmap)
+- [Learning resources for .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/get-started/resources) — Microsoft's curated list
+- [Build mobile and desktop apps with .NET MAUI](https://learn.microsoft.com/en-us/training/paths/build-apps-with-dotnet-maui/) — official Microsoft Learn training path
+- [awesome-dotnet-maui](https://github.com/jsuarezruiz/awesome-dotnet-maui) — a community-maintained list of libraries, tools & samples
+- [.NET Community](https://dotnet.microsoft.com/en-us/platform/community) — Discord, forums, and community standups
+- Follow along: [James Montemagno](https://www.youtube.com/@JamesMontemagno) & [Gerald Versluis](https://www.youtube.com/@jfversluis) on YouTube
 
 ## Wrap Ups
 
